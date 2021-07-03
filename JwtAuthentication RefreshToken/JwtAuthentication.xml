@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JwtAuthentication</name>
+    </assembly>
+    <members>
+        <member name="M:JwtAuthentication.Controllers.AuthenticationController.LoginAsync(JwtAuthentication.Models.ViewModels.Atuh.UserLoginRequest)">
+            <summary>
+            Action For Get Access Token
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JwtAuthentication.Controllers.AuthenticationController.RegisterAsync(JwtAuthentication.Models.ViewModels.Atuh.UserRegistrationRequestDto)">
+            <summary>
+            Action For Store User Data And Get Confirmation Email
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JwtAuthentication.Controllers.AuthenticationController.RecoveryPasswordAsync(System.String)">
+            <summary>
+            For Recovery Password:
+            First: Send User Email From This Action
+            Second: You Get An Email, Open It, Click The Link,
+            Impelemnt A View For That Link. Get Email Addresss And Token
+            Thered: Send Token,Email,NewPassword To RecoveryPasswordConfirm Action 
+            </summary>
+            <param name="email"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JwtAuthentication.Controllers.AuthenticationController.RecoveryPasswordConfirmAsync(JwtAuthentication.Models.ViewModels.Atuh.RecoveryPasswordConfirmViewModel)">
+            <summary>
+            This Action For Recovery Password
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JwtAuthentication.Controllers.AuthenticationController.ConfirmEmailAsync(JwtAuthentication.Models.ViewModels.Atuh.EmailConfirmViewModel)">
+            <summary>
+            This Action For Active Confirmation. User After Confirm Email Can Get Token.
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+            <summary>
+            This Action For Active Confirmation. User After Confirm Email Can Get Token.
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JwtAuthentication.Controllers.AuthenticationController.ResetPasswordAsync(JwtAuthentication.Models.ViewModels.Atuh.RestPasswordViewModel)">
+            <summary>
+            for change the password
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JwtAuthentication.Controllers.AuthenticationController.RefreshToken(JwtAuthentication.Models.ViewModels.Atuh.TokenRequest)">
+            <summary>
+            this is action for refreshing token
+            </summary>
+            <param name="tokenRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Utilites.SendEmail.send(System.String,System.String,System.String,System.String)">
+            <summary>
+            The Method For sending email to your user by your local gmail account.
+            
+            before using this. go to your google account and active then
+            https://myaccount.google.com/u/1/lesssecureapps
+            </summary>
+            <param name="subject">Your emial subject. show bold on email</param>
+            <param name="body">Your email body. can be html and inline css code</param>
+            <param name="to">Target email</param>
+            <param name="GiveName">The name of Given name. show when email open</param>
+        </member>
+    </members>
+</doc>
